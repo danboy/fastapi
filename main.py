@@ -2,7 +2,7 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI
 
-from routes import items, ping, root
+from api import items, ping, root
 
 load_dotenv()
 
