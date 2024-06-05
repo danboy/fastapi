@@ -2,7 +2,7 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI
 
-from api import items, ping, root
+from api import items, root, send
 
 load_dotenv()
 
@@ -10,4 +10,4 @@ app = FastAPI()
 
 app.include_router(root.router)
 app.include_router(items.router)
-app.include_router(ping.router)
+app.include_router(send.router)

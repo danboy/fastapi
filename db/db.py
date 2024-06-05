@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 db_url=getenv("DATABASE_URL");
-print(f"\n\nENV{db_url}\n\n")
 
 async_engine = create_async_engine(db_url, echo=False, future=True)
 

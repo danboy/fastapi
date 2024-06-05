@@ -1,9 +1,6 @@
 from .controller import ItemsController
 from typing import Union
 
-from fastapi import APIRouter
-
-
 from .schemas import ItemSchema
 from db.db import db_session
 from db.models.item import Item
@@ -25,7 +22,7 @@ async def get_items(
 
 @router.post("/", response_model=Item)
 async def create_item(
-        data: ItemSchema,
+    data: ItemSchema,
     session: AsyncSession = Depends(db_session),
 ) -> Item:
     item_service = ItemsController(session=session)
